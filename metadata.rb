@@ -10,6 +10,6 @@ version          '0.1.0'
   supports os
 end
 
-%w{ yum apt python logrotate }.each do |ckbk|
+%w{ yum apt logrotate }.each do |ckbk|
   depends ckbk
 end
