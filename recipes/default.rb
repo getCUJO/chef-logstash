@@ -51,7 +51,7 @@ end
 service "logstash" do
   case node["platform"]
     when "ubuntu"
-      if node["platform_version"].to_f >= 14.04
+      if (node["platform_version"].to_f >= 14.04 && node['platform_version'].to_f < 16.0)
         provider Chef::Provider::Service::Upstart
       end
   end
